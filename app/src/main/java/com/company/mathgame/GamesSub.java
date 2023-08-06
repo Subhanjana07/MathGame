@@ -80,6 +80,7 @@ public class GamesSub extends AppCompatActivity {
                         question.setText("Sorry your answer is wrong");
                     }
                     okay.setEnabled(false);
+                    nextQues.setEnabled(true);
                 }
             }
         });
@@ -119,6 +120,7 @@ public class GamesSub extends AppCompatActivity {
             question.setText(num2+" - "+num1);
         }
         startTimer();
+        nextQues.setEnabled(false);
     }
 
     public void startTimer(){
@@ -141,6 +143,7 @@ public class GamesSub extends AppCompatActivity {
                 life.setText(""+userLife);
                 question.setText("Time is up");
                 okay.setEnabled(false);
+                nextQues.setEnabled(true);
 
             }
         }.start();

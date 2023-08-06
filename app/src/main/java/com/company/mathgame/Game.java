@@ -82,6 +82,7 @@ public class Game extends AppCompatActivity {
                         question.setText("Sorry your answer is wrong");
                     }
                     okay.setEnabled(false);
+                    nextQues.setEnabled(true);
                 }
             }
         });
@@ -115,6 +116,7 @@ public class Game extends AppCompatActivity {
         realAns = num1+num2;
         question.setText(num1+" + "+num2);
         startTimer();
+        nextQues.setEnabled(false);
     }
 
     public void startTimer(){
@@ -137,6 +139,7 @@ public class Game extends AppCompatActivity {
                 life.setText(""+userLife);
                 question.setText("Time is up");
                 okay.setEnabled(false);
+                nextQues.setEnabled(true);
 
             }
         }.start();
